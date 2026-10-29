@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+}
+
+:root {
+  --paper: #f6f7f9;
+  --ink: #12233d;
+  --muted: #5a6578;
+  --line: #dce1e8;
+  --accent: #2b59c3;
+  --accent-soft: #e3eaf9;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e1726;
+    --ink: #e8edf5;
+    --muted: #9aa6b8;
+    --line: #24324a;
+    --accent: #8aaeff;
+    --accent-soft: #1a2a48;
+    color-scheme: dark;
+  }
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Dibujo del grafo del hero: una sola animación al cargar */
+.edge { stroke-dasharray: 260; stroke-dashoffset: 260; animation: draw 1.4s ease-out forwards; }
+.node { opacity: 0; animation: appear 0.5s ease-out forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes appear { to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .edge, .node { animation: none; stroke-dashoffset: 0; opacity: 1; }
+}
+
+/* Aparición suave al scrollear */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Entrada del encabezado al cargar la página */
+.intro > * { opacity: 0; transform: translateY(12px); animation: intro 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.intro > *:nth-child(1) { animation-delay: 0.05s; }
+.intro > *:nth-child(2) { animation-delay: 0.15s; }
+.intro > *:nth-child(3) { animation-delay: 0.3s; }
+.intro > *:nth-child(4) { animation-delay: 0.4s; }
+.intro > *:nth-child(5) { animation-delay: 0.55s; }
+@keyframes intro { to { opacity: 1; transform: none; } }
+
+/* Barras de avance de las carreras */
+.bar { transform: scaleX(0); transform-origin: left; transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s; }
+.is-visible .bar { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .intro > *, .bar { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
+}
