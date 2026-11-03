@@ -12,7 +12,7 @@ export const profile = {
   github: 'https://github.com/Matias-G-Gomez',
   // Cuando cambies tu URL personalizada de LinkedIn, reemplazala acá.
   linkedin: 'https://www.linkedin.com/in/matias-german-gomez/',
-  cv: '/CV_Matias_German_Gomez_Desarrollador.pdf/',
+  cv: 'CV_Matias_German_Gomez_Desarrollador.pdf',
 }
 
 // Cada proyecto puede tener código, demo e imagen
