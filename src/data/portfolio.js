@@ -31,13 +31,14 @@ export const projects = [
   {
     title: 'Plataforma de Datos Multimodelo',
     description:
-      'Red profesional estilo LinkedIn construida sobre cuatro bases de datos, cada una elegida según su caso de uso. Incluye CRUD completo, 7 casos de uso y una carga de 600 usuarios con unas 520 conexiones cada uno.',
-    stack: ['Python', 'PostgreSQL', 'MongoDB', 'Neo4j', 'Redis', 'Docker'],
+        'Red profesional estilo LinkedIn construida sobre cuatro bases de datos: PostgreSQL para los datos de negocio, MongoDB para publicaciones con comentarios embebidos, Redis para rankings y Neo4j para la red de conexiones. Incluye una aplicación de consola que las sincroniza y un panel web con 7 casos de uso analíticos.',
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis', 'Neo4j', 'Docker'],
     repo: 'https://github.com/Matias-G-Gomez/Multidb-LinkedIn-UADE-Ingenieria-Datos-2',
-    demo: '',
-    image: '',
+    demo: 'https://red-profesional-multimodelo.onrender.com/',
+    image: '/projects/multimodelo/panel.png',
   },
-    {
+
+  {
     title: 'Sistema de Gestión de Turnos Médicos',
     description:
       'Aplicación web full stack para un consultorio de traumatología. Los pacientes piden turnos online y el personal los gestiona desde un panel con inicio de sesión JWT, permisos por rol, confirmación y cancelación de turnos, gestión de obras sociales y avisos automáticos por email.',
