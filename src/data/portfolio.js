@@ -1,5 +1,3 @@
-// Todo el contenido de la web está acá.
-// Para actualizar el portfolio, editá este archivo y no hace falta tocar los componentes.
 
 export const profile = {
   name: 'Matías Germán Gómez',
@@ -17,28 +15,18 @@ export const profile = {
   cv: '/CV_Matias_German_Gomez.pdf',
 }
 
-// Cada proyecto puede tener, además del código:
-//   demo:  link a la versión publicada (ej. 'https://turnos-medicos.vercel.app')
-//   image: captura de pantalla guardada en public/projects/ (ej. '/projects/turnos.png')
-// Si dejás alguno vacío, la web simplemente no lo muestra.
+// Cada proyecto puede tener código, demo e imagen
+
 export const projects = [
   {
-    title: 'Sistema de Gestión de Turnos Médicos',
+    title: 'EstoyBien, app de detección de caídas',
+    status: 'En desarrollo',
     description:
-      'Aplicación web full stack para un consultorio de traumatología. Tiene inicio de sesión con JWT, permisos por rol para administración y secretaría, reserva y cancelación de turnos, gestión de obras sociales y avisos automáticos por email.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Nodemailer'],
-    repo: 'https://github.com/Matias-G-Gomez/Medical-Appointment-System',
+      'Proyecto en equipo: app Android para adultos mayores y personas con movilidad reducida que detecta caídas y alerta a contactos de emergencia.',
+    stack: ['Kotlin', 'Android'],
+    repo: 'https://github.com/Matias-G-Gomez/estoybien-app',
     demo: '',
     image: '',
-  },
-    {
-    title: 'Sistema de Planificación de Rutas',
-    description:
-      'Aplicación que modela lugares de Buenos Aires como un grafo en Neo4j y resuelve rutas, redes mínimas e itinerarios con 11 algoritmos, entre ellos Dijkstra, BFS, DFS, Prim, Kruskal y Branch and Bound. Tiene un backend en Spring Boot con API REST y una interfaz web que dibuja cada resultado sobre el mapa.',
-    stack: ['Java', 'Spring Boot', 'Neo4j', 'API REST', 'JavaScript'],
-    repo: 'https://github.com/Matias-G-Gomez/progra3-tpo-rutas',
-    demo: 'https://planificador-rutas-036d.onrender.com/',
-    image: '/projects/planificacion-rutas/dijkstra.png',
   },
   {
     title: 'Plataforma de Datos Multimodelo',
@@ -49,15 +37,23 @@ export const projects = [
     demo: '',
     image: '',
   },
-  {
-    title: 'EstoyBien, app de detección de caídas',
-    status: 'En desarrollo',
+    {
+    title: 'Sistema de Gestión de Turnos Médicos',
     description:
-      'Proyecto en equipo: app Android para adultos mayores y personas con movilidad reducida que detecta caídas y alerta a contactos de emergencia.',
-    stack: ['Kotlin', 'Android'],
-    repo: 'https://github.com/Matias-G-Gomez/estoybien-app',
-    demo: '',
-    image: '',
+      'Aplicación web full stack para un consultorio de traumatología. Los pacientes piden turnos online y el personal los gestiona desde un panel con inicio de sesión JWT, permisos por rol, confirmación y cancelación de turnos, gestión de obras sociales y avisos automáticos por email.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Material UI'],
+    repo: 'https://github.com/Matias-G-Gomez/Medical-Appointment-System',
+    demo: 'https://medical-appointment-system-rosy.vercel.app/admin',
+    image: '/projects/turnos-medicos/panel.png',
+  },
+  {
+    title: 'Sistema de Planificación de Rutas',
+    description:
+      'Aplicación que modela lugares de Buenos Aires como un grafo en Neo4j y resuelve rutas, redes mínimas e itinerarios con 11 algoritmos, entre ellos Dijkstra, BFS, DFS, Prim, Kruskal y Branch and Bound. Tiene un backend en Spring Boot con API REST y una interfaz web que dibuja cada resultado sobre el mapa.',
+    stack: ['Java', 'Spring Boot', 'Neo4j', 'API REST', 'JavaScript'],
+    repo: 'https://github.com/Matias-G-Gomez/progra3-tpo-rutas',
+    demo: 'https://planificador-rutas-036d.onrender.com/',
+    image: '/projects/planificacion-rutas/dijkstra.png',
   },
 ]
 
