@@ -33,22 +33,6 @@ export default function Projects() {
       <ul className="space-y-14">
         {projects.map((p) => (
           <Reveal as="li" key={p.title} className="group">
-            {p.image && (
-              <a
-                href={p.demo || p.repo}
-                target="_blank"
-                rel="noreferrer"
-                className="mb-6 block overflow-hidden rounded-xl border border-line bg-accent-soft"
-                aria-label={`Abrir ${p.title}`}
-              >
-                <img
-                  src={p.image}
-                  alt={`Captura de ${p.title}`}
-                  loading="lazy"
-                  className="aspect-[16/9] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                />
-              </a>
-            )}
             <h3 className="text-xl font-bold tracking-tight text-ink">
               {p.title}
               {p.status && (
@@ -68,6 +52,22 @@ export default function Projects() {
             <div className="mt-5">
               <ProjectLinks demo={p.demo} repo={p.repo} />
             </div>
+            {p.image && (
+              <a
+                href={p.demo || p.repo}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 block overflow-hidden rounded-xl border border-line bg-accent-soft"
+                aria-label={`Abrir ${p.title}`}
+              >
+                <img
+                  src={p.image}
+                  alt={`Captura de ${p.title}`}
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                />
+              </a>
+            )}
           </Reveal>
         ))}
       </ul>
