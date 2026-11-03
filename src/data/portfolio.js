@@ -31,14 +31,14 @@ export const projects = [
     demo: '',
     image: '',
   },
-  {
+    {
     title: 'Sistema de Planificación de Rutas',
     description:
-      'Backend en Spring Boot que planifica y optimiza recorridos modelados como grafos en Neo4j. Implementa distintos algoritmos sobre grafos y los expone mediante una API REST.',
-    stack: ['Java', 'Spring Boot', 'API REST', 'Neo4j'],
+      'Aplicación que modela lugares de Buenos Aires como un grafo en Neo4j y resuelve rutas, redes mínimas e itinerarios con 11 algoritmos, entre ellos Dijkstra, BFS, DFS, Prim, Kruskal y Branch and Bound. Tiene un backend en Spring Boot con API REST y una interfaz web que dibuja cada resultado sobre el mapa.',
+    stack: ['Java', 'Spring Boot', 'Neo4j', 'API REST', 'JavaScript'],
     repo: 'https://github.com/Matias-G-Gomez/progra3-tpo-rutas',
     demo: 'https://planificador-rutas-036d.onrender.com/',
-    image: '../../docs/capturas/planificacion-rutas/dijkstra.png',
+    image: '/projects/planificacion-rutas/dijkstra.png',
   },
   {
     title: 'Plataforma de Datos Multimodelo',
